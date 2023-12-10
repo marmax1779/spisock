@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="discription" content="home work" />
+    <meta name="keywords" content="html5,css" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="https://unpkg.com/vue@next"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+    <script defer src="script.js"></script>
+
+</head>
+
+<body class="content" id="body">
+    <div id="example">
+
+        <div class="container">
+            <button class="but" v-on:click="getAnsver">Получить данные в консоль</button>
+            <button class="but" v-on:click="addTodo">Добавить к списку</button>
+            <button class="but" v-on:click="deleteItem">Удалить</button>
+            <button class="but" v-on:click="sortList">Сортировка</button>
+        </div>
+
+        <div class="container2">
+            <input class="but" v-model="watchInput" />
+        </div>
+
+        <ol class="text">
+            <todo-item-new-test v-for="item in groceryList" v-bind:todo="item">
+            </todo-item-new-test>
+        </ol>
+    </div>
+
+</body>
+
+</html>
